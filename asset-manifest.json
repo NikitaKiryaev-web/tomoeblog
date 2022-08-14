@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.14d330f0.css",
+    "main.js": "/static/js/main.a27d539a.js",
+    "static/media/SFPRODISPLAYMEDIUM.OTF": "/static/media/SFPRODISPLAYMEDIUM.b85d841dacb040b84951.OTF",
+    "static/media/SFPRODISPLAYBOLD.OTF": "/static/media/SFPRODISPLAYBOLD.b1f4d2c69fa808ebca12.OTF",
+    "static/media/SFPRODISPLAYREGULAR.OTF": "/static/media/SFPRODISPLAYREGULAR.d1f5e6e16dd4f75c3950.OTF",
+    "static/media/NewYorkExtraLarge-Bold.otf": "/static/media/NewYorkExtraLarge-Bold.d0668ff23be8f8a784df.otf",
+    "static/media/NewYorkMedium-Regular.otf": "/static/media/NewYorkMedium-Regular.f206eae1aa7fba845fdf.otf",
+    "static/media/NewYorkSmall-Medium.otf": "/static/media/NewYorkSmall-Medium.4a25cc026429c9354d21.otf",
+    "static/media/NewYorkSmall-Regular.otf": "/static/media/NewYorkSmall-Regular.a8dbc816032aff9f99ed.otf",
+    "static/media/logo.svg": "/static/media/logo.027d4b1a1e47b9eee962e90fd10e5690.svg",
+    "static/media/white-logo.svg": "/static/media/white-logo.f5e31b586108a69b6c974e9234033d17.svg",
+    "index.html": "/index.html",
+    "main.14d330f0.css.map": "/static/css/main.14d330f0.css.map",
+    "main.a27d539a.js.map": "/static/js/main.a27d539a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.14d330f0.css",
+    "static/js/main.a27d539a.js"
+  ]
+}
