@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
 type LayoutProps = {
@@ -7,10 +8,11 @@ type LayoutProps = {
 
 const Layout: FC<LayoutProps> = (props) => {
   return (
-    <>
+    <div className="layout">
       <Header />
       {props.children}
-    </>
+      <Footer />
+    </div>
   );
 };
 

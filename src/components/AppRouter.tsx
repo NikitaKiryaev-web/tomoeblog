@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import NotFound from "../pages/NotFound";
 import { privateRoutes, publicRoutes } from "../routes";
-import Header from "./Header/Header";
 
 const AppRouter: FC = () => {
   const auth = true;
@@ -10,12 +10,14 @@ const AppRouter: FC = () => {
       {privateRoutes.map((route) => (
         <Route key={route.path} path={route.path} element={<route.element />} />
       ))}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   ) : (
     <Routes>
       {publicRoutes.map((route) => (
         <Route key={route.path} path={route.path} element={<route.element />} />
       ))}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
