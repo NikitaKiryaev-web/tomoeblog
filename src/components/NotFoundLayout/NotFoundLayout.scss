@@ -1,0 +1,45 @@
+@use '../../styles/vars';
+
+.not-found {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000;
+    font-family: vars.$sf-medium;
+    color: #fff;
+    &__title {
+        font-size: 20px;
+        line-height: 25px;
+        margin: 0 0 20px;
+    }
+    &__image {
+        width: 50%;
+        object-fit: cover;
+        object-position: center;
+        margin: 0 0 20px;
+    }
+    &__link {
+        font-size: 20px;
+        line-height: 25px;
+        color: #fff;
+        position: relative;
+        text-decoration: none;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            width: 0%;
+            height: 1px;
+            background-color: #fff;
+        }
+        &:hover {
+            &::before {
+                transition: .4s;
+                width: 100%;
+            }
+        }
+    }
+}

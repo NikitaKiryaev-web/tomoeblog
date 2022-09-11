@@ -1,6 +1,5 @@
-import React, { FC } from "react";
+import React, { FC, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import NotFound from "../pages/NotFound";
 import { privateRoutes, publicRoutes } from "../routes";
 
 const AppRouter: FC = () => {
@@ -8,16 +7,21 @@ const AppRouter: FC = () => {
   return auth ? (
     <Routes>
       {privateRoutes.map((route) => (
-        <Route key={route.path} path={route.path} element={<route.element />} />
+        <Route key={route.path} path={route.path} element={
+        <Suspense fallback={<route.fallBack />}>
+          <route.element />
+        </Suspense>
+        } />
       ))}
-      <Route path="*" element={<NotFound />} />
     </Routes>
   ) : (
     <Routes>
       {publicRoutes.map((route) => (
-        <Route key={route.path} path={route.path} element={<route.element />} />
+        <Route key={route.path} path={route.path} element={
+        <Suspense fallback={<route.fallBack />}>
+        <route.element />
+      </Suspense>} />
       ))}
-      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
