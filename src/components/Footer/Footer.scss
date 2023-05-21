@@ -1,42 +1,89 @@
-@use "../../styles/vars";
+@import "../../styles/vars.scss";
 
-@keyframes slide {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  25% {
-    transform: translate3d(-100%, 0, 0);
-  }
-  50% {
-    transform: translate3d(100%, 0, 0);
-  }
-  100% {
-    transform: translate3d(-100%, 0, 0);
-  }
-}
 .footer {
   width: 100%;
   background-color: #000;
   display: flex;
   flex-direction: column;
+  padding: 18px 0 32px;
   &__logo {
     width: 291px;
     height: 27px;
     margin: 0 auto 26px;
   }
+  &__text {
+    font-family: $NewYorkSmallRegular;
+    color: #fff;
+    max-width: 490px;
+    margin: 0 auto 32px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
+  }
+  &__links {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 64px;
+    &-item {
+      margin: 0 29px 0 0;
+      &:hover {
+        transition: 0.3s;
+        transform: scale(1.2);
+      }
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+    &-link {
+      font-family: $sf-regular;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 27px;
+      color: #fff;
+    }
+  }
+  &__author-text {
+    font-family: $sf-medium;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    span {
+      display: block;
+    }
+  }
   .swiper {
-    margin: 18px 0 105px;
+    margin: 0 auto 105px;
+    width: 320px;
+    @media (min-width: 768px) {
+      width: 768px;
+    }
+    @media (min-width: 1024px) {
+      width: 1024px;
+    }
+    @media (min-width: 1600px) {
+      width: 1600px;
+    }
+    @media (min-width: 1920px) {
+      width: 1920px;
+    }
   }
   .swiper-slide {
     text-transform: uppercase;
-    font-family: vars.$sf-bold;
+    font-family: $sf-bold;
     font-size: 20px;
     line-height: 28px;
     text-align: center;
     color: #fff;
     letter-spacing: 0.1em;
     &:nth-child(2n) {
-      font-family: vars.$sf-regular;
+      font-family: $sf-regular;
     }
   }
 }

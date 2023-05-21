@@ -1,4 +1,4 @@
-@use "../../styles/vars";
+@import "../../styles/vars";
 .nav {
   &__list {
     display: flex;
@@ -13,7 +13,7 @@
       }
     }
     &-link {
-      font-family: vars.$NewYorkSmallMedium;
+      font-family: $NewYorkSmallMedium;
       font-weight: 500;
       color: #000;
       text-decoration: none;
