@@ -8,7 +8,7 @@ const Nav: FC = () => {
     <nav className="nav">
       <ul className="nav__list">
         <li className="nav__list-item">
-          <NavLink className="nav__list-link" to={RootPaths.BLOG}>
+          <NavLink className="nav__list-link" to={RootPaths.BLOGS}>
             БЛОГ
           </NavLink>
         </li>

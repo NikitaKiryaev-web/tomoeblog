@@ -1,10 +1,10 @@
 import React from "react";
-const About = React.lazy(() => import ("../pages/About"));
-const Admin = React.lazy(() => import ("../pages/Admin"));
-const Login = React.lazy(() => import ("../pages/Login"));
-const NotFound = React.lazy(() => import ("../pages/NotFound"));
+const About = React.lazy(() => import("../pages/About"));
+const Admin = React.lazy(() => import("../pages/Admin"));
+const Login = React.lazy(() => import("../pages/Login"));
+const NotFound = React.lazy(() => import("../pages/NotFound"));
 import Loader from "../components/Loader/Loader";
-import Blogs from "../pages/Blogs";
+import Blogs from "../pages/Blog/Blogs";
 
 interface IRoute {
   path: string;
@@ -14,10 +14,10 @@ interface IRoute {
 
 export enum RootPaths {
   LOGIN = "/login",
-  BLOG = "/",
+  BLOGS = "/",
   ADMIN = "/admin",
   ABOUT = "/about",
-  NOTFOUND = '*',
+  NOTFOUND = "*",
 }
 
 export const publicRoutes: IRoute[] = [
@@ -27,7 +27,7 @@ export const publicRoutes: IRoute[] = [
     fallBack: Loader,
   },
   {
-    path: RootPaths.BLOG,
+    path: RootPaths.BLOGS,
     element: Blogs,
     fallBack: Loader,
   },
@@ -40,7 +40,7 @@ export const publicRoutes: IRoute[] = [
     path: RootPaths.NOTFOUND,
     element: NotFound,
     fallBack: Loader,
-  }
+  },
 ];
 
 export const privateRoutes: IRoute[] = [

@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import "./Layout.scss";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
@@ -10,7 +11,7 @@ const Layout: FC<LayoutProps> = (props) => {
   return (
     <div className="layout">
       <Header />
-      {props.children}
+      <div className="layout__wrapper">{props.children}</div>
       <Footer />
     </div>
   );
